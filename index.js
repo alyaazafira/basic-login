@@ -35,9 +35,26 @@ function login (username,password){
    }
    //console.log(matched)
 
+function register(newusername, newpassword, newname, newemail) {
+    console.log("someone try to login with", username,password)         //apa yang user akan masukkan//
+    dbUsers.find(element => {                       //finde element dalam array//
+       console.log(element)
+    })
+
+    dbUsers.push({
+        username: newusername,
+        password: newpassword,
+        name: newname,
+        email: newemail
+    })
+
+}
+
       
 
 //try login//
 //login("autem","password")
 //login("alyaazafira","123")
 console.log(login("yaya","222"))
+register("cacaa33","333333","syasya","ca@utem.my")
+console.log(login("cacaa33", "333333"))
